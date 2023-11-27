@@ -3,13 +3,11 @@ Description=buptnet_autologin
 After=network.target
 
 [Service]
-User=bupt
-Group=bupt
 
 Type=simple
 ExecStart=/home/fxyang/Software/anaconda3/bin/python /home/fxyang/Software/buptCN_pythonScript/buptCN.py
 ExecReload=/home/fxyang/Software/anaconda3/bin/python /home/fxyang/Software/buptCN_pythonScript/buptCN.py
-RestartSec=3600	# 每一小时重启一次服务 可以将python脚本修改为 先断网再联网
+RestartSec=3600
 
 [Install]
 WantedBy=multi-user.target
